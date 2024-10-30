@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("EmployeeMgmt");
 builder.Services.AddDbContext<EmployeeMgmtContext>(options => options.UseSqlServer(connectionString));
-// Add services to the container.
+
 
 builder.Services.AddScoped<DesignationCrud>();
 builder.Services.AddScoped<EmployeeCrud>();
